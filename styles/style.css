@@ -158,6 +158,10 @@
   margin-block-end: 10px;
 }
 
+.concentrate-better .section__subtitle {
+  margin-block-end: 0;
+}
+
 .text-card__title {
   margin-block-end: 10px;
 }
