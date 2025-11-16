@@ -2,3 +2,73 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+
+  --page-background-image-source: url('../images/cover-image-dark.png');
+  --page-background-color: #000028;
+
+  --color-title: #db00ff;
+  --color-header: #ff0070;
+  --color-button-hover: rgba(255, 0, 112, 0.4);
+  --color-main-text: #f1b2ce;
+  --color-accent: #ff0070;
+  --color-accent-text: #000028;
+  --color-section-title: #ff0070;
+
+  --font-family: 'IBM Plex mono';
+
+  /*--header-top-padding: 75px; */
+  /*--header-above-title-gap: 65px;*/
+  /*--header-below-title-gap: 55px;*/
+  /*--header-bottom-padding: 66px; */
+  /*--general-gap: 10px;*/
+  /*--page-gap: 40px;*/
+  /*--main-gap: 50px;*/
+  /*--gallery-gap: 10px;*/
+
+  /*--min-header-size: 668px;*/
+
+  --header-top-padding: clamp(4.6875rem, -2.2901rem + 29.771vw, 12rem);
+  /*From 20px to 0px*/
+  --header-left-padding: clamp(0rem, 1.2214rem - 2.5445vw, 0.625rem);
+  --header-above-title-gap: clamp(4.0625rem, -2.3783rem + 27.4809vw, 10.8125rem);
+  --header-below-title-gap: clamp(3.4375rem, -2.9437rem + 27.2265vw, 10.125rem);
+  --header-bottom-padding: clamp(4.125rem, -2.8526rem + 29.771vw, 11.4375rem);
+  --general-gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  --page-gap: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
+  --main-gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
+  --gallery-gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+
+  --min-header-size: clamp(41.75rem, 20.5191rem + 90.5852vw, 64rem);
+
+  --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+}
+
+
+@media (width >= 768px) {
+  :root {
+    --header-top-padding: 192px;
+    --header-left-padding: 0;
+    --header-above-title-gap: 173px;
+    --header-below-title-gap: 162px;
+    --header-bottom-padding: 183px;
+    --general-gap: 20px;
+    --page-gap: 60px;
+    --main-gap: 80px;
+    --gallery-gap: 20px;
+    --min-header-size: 1024px;
+
+    --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width  >= 1024px) {
+  :root {
+    --header-top-padding: 20px;
+    --header-above-title-gap: 273px;
+    --header-below-title-gap: 114px;
+    --header-bottom-padding: 134px;
+    --min-header-size: 768px;
+
+  }
+}
