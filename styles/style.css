@@ -131,8 +131,8 @@
 
 .title-decor {
   color: var(--color-accent-text, #000028);
+  font-size: 18px;
   background-color: var(--color-accent, #ff0070);
-  block-size: fit-content;
 }
 
 .main {
