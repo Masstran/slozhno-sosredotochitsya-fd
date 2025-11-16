@@ -2,12 +2,12 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  display: grid;
+  gap: var(--page-gap, 40px);
   font-family: var(--font-family), 'sans-serif';
   background: var(--page-background-image-source, url('../images/cover-image.png')) no-repeat center / cover;
   background-color: var(--page-background-color, #000028);
   background-attachment: fixed;
-  display: grid;
-  gap: var(--page-gap, 40px);
 }
 
 .header {
@@ -84,12 +84,12 @@
 }
 
 .header__theme-menu-button {
-  min-inline-size: 70px;
-  min-block-size: 26px;
   border: 0;
   font-family: inherit;
   text-transform: lowercase;
   background-color: transparent;
+  min-inline-size: 70px;
+  min-block-size: 26px;
 }
 
 .header__theme-menu-button:hover {
@@ -97,11 +97,10 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: none;
-  border-block-end: 1px solid var(--color-header, #ff0070);
   margin-block-end: -1px;
+  border-block-end: 1px solid var(--color-header, #ff0070);
+  outline: none;
 }
-
 
 .header__theme-menu-button_active {
   border: 1px solid var(--color-header, #ff0070);
@@ -120,13 +119,13 @@
 }
 
 .header__intro-text {
+  justify-self: end;
   font-family: var(--font-family), 'sans-serif';
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3em;
   letter-spacing: 0;
   block-size: fit-content;
-  justify-self: end;
   max-inline-size: 364px;
 }
 
@@ -138,8 +137,8 @@
 .main {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 0 var(--general-gap, 10px);
   gap: var(--main-gap, 50px);
+  padding: 0 var(--general-gap, 10px);
 }
 
 .section {
@@ -178,12 +177,11 @@
 
 .text-link:hover {
   text-decoration: underline;
-  text-decoration-skip-ink: none;
   text-decoration-color: var(--color-main-text, #f1b2ce);
+  text-decoration-skip-ink: none;
 }
 
-.text-link:focus-visible
-{
+.text-link:focus-visible {
   outline: 1px solid var(--color-main-text, #f1b2ce);
 }
 
@@ -194,7 +192,6 @@
 .topic-images .section__subtitle {
   margin-block-end: 0;
 }
-
 
 .concentrate-better__content {
   display: grid;
@@ -220,20 +217,19 @@
 }
 
 .gallery__item {
-  inline-size: 100%;
-  block-size: 100%;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
-
 .footer {
-  block-size: 100vh;
-  min-block-size: var(--min-header-size, 668px);
+  position: relative;
   display: grid;
   justify-content: center;
   align-items: center;
-  position: relative;
+  block-size: 100vh;
+  min-block-size: var(--min-header-size, 668px);
 }
 
 .footer__text {
@@ -256,15 +252,19 @@
   .section {
     grid-template-columns: 1fr 2fr;
   }
+
   .concentration-difficult .text-card {
     grid-column: 2;
   }
+
   .concentration-lowers .text-card {
     grid-column: 1 / -1;
   }
+
   .topic-images {
     grid-template-columns: 1fr;
   }
+
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     /*grid-template-rows: 192px 230px 318px;*/
@@ -278,15 +278,19 @@
   .sunset {
     grid-area: sunset;
   }
+
   .ice-cream {
     grid-area: ice-cream;
   }
+
   .books {
     grid-area: books;
   }
+
   .tape {
     grid-area: tape;
   }
+
   .street {
     grid-area: street;
   }
